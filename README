@@ -3,7 +3,7 @@ NAME
     algorithm
 
 VERSION
-    version 0.002
+    version 0.003
 
 SYNOPSIS
       use Data::UUID::MT;
@@ -110,7 +110,7 @@ METHODS
 COMPARISON TO OTHER UUID MODULES
     At the time of writing, there are five other general purpose UUID
     generators on CPAN that I consider potential alternatives.
-    Data::GUID::MT is included in the dicussion below for comparison.
+    Data::UUID::MT is included in the dicussion below for comparison.
 
     *   Data::GUID - version 1 UUIDs (wrapper around Data::UUID)
 
@@ -122,7 +122,7 @@ COMPARISON TO OTHER UUID MODULES
 
     *   UUID::Tiny - versions 1, 3, 4, or 5 (pure perl)
 
-    *   Data::GUID::MT - version 1 or 4 (or custom sequential "4s")
+    *   Data::UUID::MT - version 1 or 4 (or custom sequential "4s")
 
     "libuuid" based UUIDs may generally be either version 4 (preferred) or
     version 1 (fallback), depending on the availability of a good random bit

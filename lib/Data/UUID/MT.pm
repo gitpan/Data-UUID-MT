@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Data::UUID::MT;
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 use Config;
 use Math::Random::MT::Auto;
@@ -285,7 +285,7 @@ Data::UUID::MT - Fast random UUID generator using the Mersenne Twister algorithm
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -403,7 +403,7 @@ custom seeding.
 =head1 COMPARISON TO OTHER UUID MODULES
 
 At the time of writing, there are five other general purpose UUID generators on
-CPAN that I consider potential alternatives.  Data::GUID::MT is included in
+CPAN that I consider potential alternatives.  Data::UUID::MT is included in
 the dicussion below for comparison.
 
 =over 4
@@ -430,7 +430,7 @@ L<UUID::Tiny> - versions 1, 3, 4, or 5 (pure perl)
 
 =item *
 
-L<Data::GUID::MT> - version 1 or 4 (or custom sequential "4s")
+L<Data::UUID::MT> - version 1 or 4 (or custom sequential "4s")
 
 =back
 

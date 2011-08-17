@@ -51,7 +51,7 @@
    "provides" : {
       "Data::UUID::MT" : {
          "file" : "lib/Data/UUID/MT.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -67,6 +67,6 @@
          "web" : "http://github.com/dagolden/data-uuid-mt"
       }
    },
-   "version" : "0.002"
+   "version" : "0.003"
 }
 
