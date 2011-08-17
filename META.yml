@@ -27,7 +27,7 @@ no_index:
 provides:
   Data::UUID::MT:
     file: lib/Data/UUID/MT.pm
-    version: 0.001
+    version: 0.002
 requires:
   Config: 0
   Math::Random::MT::Auto: 0
@@ -38,4 +38,4 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT
   homepage: http://github.com/dagolden/data-uuid-mt
   repository: http://github.com/dagolden/data-uuid-mt
-version: 0.001
+version: 0.002

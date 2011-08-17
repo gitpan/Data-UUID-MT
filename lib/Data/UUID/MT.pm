@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Data::UUID::MT;
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 use Config;
 use Math::Random::MT::Auto;
@@ -285,7 +285,7 @@ Data::UUID::MT - Fast random UUID generator using the Mersenne Twister algorithm
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -310,6 +310,11 @@ as a source of fast, high-quality (pseudo) random numbers.
 Three different types of UUIDs are supported.  Two are consistent with
 RFC 4122 and one is a custom variant that provides a 'sequential UUID'
 that can be advantageous when used as a primary database key.
+
+B<Note>: The Mersenne Twister pseudo-random number generator has excellent
+statistical properties, but it is not considered cryptographically secure.
+Pseudo-random UUIDs are not recommended for use as security authentication
+tokens in cookies or other user-visible session identifiers.
 
 =head2 Version 1 UUIDs
 
