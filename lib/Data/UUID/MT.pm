@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Data::UUID::MT;
-our $VERSION = '0.003'; # VERSION
+our $VERSION = '0.004'; # VERSION
 
 use Config;
 use Math::Random::MT::Auto;
@@ -285,7 +285,7 @@ Data::UUID::MT - Fast random UUID generator using the Mersenne Twister algorithm
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -404,7 +404,7 @@ custom seeding.
 
 At the time of writing, there are five other general purpose UUID generators on
 CPAN that I consider potential alternatives.  Data::UUID::MT is included in
-the dicussion below for comparison.
+the discussion below for comparison.
 
 =over 4
 
@@ -462,7 +462,7 @@ address, if available, or will substitute a random MAC (with multicast bit
 set).
 
 Data::UUID version 1 UUIDs do not contain the MAC address, but replace
-it with an MD5 hash of data including the hostname and hostid (possibly
+it with an MD5 hash of data including the hostname and host id (possibly
 just the IP address), modified with the multicast bit.
 
 Both UUID::Tiny and Data::UUID::MT version 1 UUIDs do not contain the actual
@@ -550,18 +550,18 @@ L<RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace|http://www.apps.
 
 =head2 Bugs / Feature Requests
 
-Please report any bugs or feature requests by email to C<bug-data-uuid-mt at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>. You will be automatically notified of any
-progress on the request by the system.
+Please report any bugs or feature requests through the issue tracker
+at L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>.
+You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
 
 This is open source software.  The code repository is available for
 public review and contribution under the terms of the license.
 
-L<http://github.com/dagolden/data-uuid-mt>
+L<https://github.com/dagolden/data-uuid-mt>
 
-  git clone http://github.com/dagolden/data-uuid-mt
+  git clone https://github.com/dagolden/data-uuid-mt.git
 
 =head1 AUTHOR
 
