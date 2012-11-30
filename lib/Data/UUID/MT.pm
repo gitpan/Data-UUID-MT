@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Data::UUID::MT;
-our $VERSION = '0.006'; # VERSION
+our $VERSION = '1.000'; # VERSION
 
 use Config;
 use Math::Random::MT::Auto;
@@ -70,11 +70,11 @@ sub create {
 }
 
 sub create_hex {
-  return "0x" . uc unpack("H*", shift->{_iterator}->() );
+  return "0x" . unpack("H*", shift->{_iterator}->() );
 }
 
 sub create_string {
-  return uc join "-", unpack("H8H4H4H4H12", shift->{_iterator}->());
+  return join "-", unpack("H8H4H4H4H12", shift->{_iterator}->());
 }
 
 sub iterator {
@@ -355,6 +355,7 @@ sub _build_32bit_v4s {
 # vim: ts=2 sts=2 sw=2 et:
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -363,7 +364,7 @@ Data::UUID::MT - Fast random UUID generator using the Mersenne Twister algorithm
 
 =head1 VERSION
 
-version 0.006
+version 1.000
 
 =head1 SYNOPSIS
 
@@ -445,15 +446,15 @@ Returns a UUID packed into a 16 byte string.
 
   my $uuid = $ug->create_hex();
 
-Returns a UUID as a hex string, prefixed with "0x", e.g.
-C<0xB0470602A64B11DA863293EBF1C0E05A>
+Returns a UUID as a lowercase hex string, prefixed with "0x", e.g.
+C<0xb0470602a64b11da863293ebf1c0e05a>
 
 =head2 create_string
 
   my $uuid = $ug->create_string(); #
 
-Returns UUID as an uppercase string in "standard" format, e.g.
-C<B0470602-A64B-11DA-8632-93EBF1C0E05A>
+Returns UUID as a lowercase string in "standard" format, e.g.
+C<b0470602-a64b-11da-8632-93ebf1c0e05a>
 
 =head2 iterator
 
@@ -481,9 +482,9 @@ custom seeding.
 =head1 UUID STRING REPRESENTATIONS
 
 A UUID contains 16 bytes.  A hex string representation looks like
-C<0xB0470602A64B11DA863293EBF1C0E05A>. A "standard" representation
-looks like C<B0470602-A64B-11DA-8632-93EBF1C0E05A>.  Sometimes
-these are seen in lower case and on Windows the standard format is
+C<0xb0470602a64b11da863293ebf1c0e05a>. A "standard" representation
+looks like C<b0470602-a64b-11da-8632-93ebf1c0e05a>.  Sometimes
+these are seen in upper case and on Windows the standard format is
 often seen wrapped in parentheses.
 
 Converting back and forth is easy with C<pack> and C<unpack>.
@@ -651,7 +652,7 @@ L<RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace|http://www.apps.
 =head2 Bugs / Feature Requests
 
 Please report any bugs or feature requests through the issue tracker
-at L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>.
+at L<https://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>.
 You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
@@ -661,7 +662,7 @@ public review and contribution under the terms of the license.
 
 L<https://github.com/dagolden/data-uuid-mt>
 
-  git clone https://github.com/dagolden/data-uuid-mt.git
+  git clone git://github.com/dagolden/data-uuid-mt.git
 
 =head1 AUTHOR
 
@@ -676,4 +677,3 @@ This is free software, licensed under:
   The Apache License, Version 2.0, January 2004
 
 =cut
-

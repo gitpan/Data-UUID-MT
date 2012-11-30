@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300025, CPAN::Meta::Converter version 2.120921'
 license: apache
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,7 +27,7 @@ no_index:
 provides:
   Data::UUID::MT:
     file: lib/Data/UUID/MT.pm
-    version: 0.006
+    version: 1.000
 requires:
   Config: 0
   Math::Random::MT::Auto: 0
@@ -37,7 +37,7 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT
-  homepage: https://github.com/dagolden/data-uuid-mt
-  repository: https://github.com/dagolden/data-uuid-mt.git
-version: 0.006
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT
+  homepage: https://metacpan.org/release/Data-UUID-MT
+  repository: git://github.com/dagolden/data-uuid-mt.git
+version: 1.000

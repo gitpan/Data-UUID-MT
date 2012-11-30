@@ -3,7 +3,7 @@ NAME
     algorithm
 
 VERSION
-    version 0.006
+    version 1.000
 
 SYNOPSIS
       use Data::UUID::MT;
@@ -77,14 +77,14 @@ METHODS
   create_hex
       my $uuid = $ug->create_hex();
 
-    Returns a UUID as a hex string, prefixed with "0x", e.g.
-    0xB0470602A64B11DA863293EBF1C0E05A
+    Returns a UUID as a lowercase hex string, prefixed with "0x", e.g.
+    0xb0470602a64b11da863293ebf1c0e05a
 
   create_string
       my $uuid = $ug->create_string(); #
 
-    Returns UUID as an uppercase string in "standard" format, e.g.
-    "B0470602-A64B-11DA-8632-93EBF1C0E05A"
+    Returns UUID as a lowercase string in "standard" format, e.g.
+    "b0470602-a64b-11da-8632-93ebf1c0e05a"
 
   iterator
       my $next = $ug->iterator;
@@ -109,9 +109,9 @@ METHODS
 
 UUID STRING REPRESENTATIONS
     A UUID contains 16 bytes. A hex string representation looks like
-    0xB0470602A64B11DA863293EBF1C0E05A. A "standard" representation looks
-    like "B0470602-A64B-11DA-8632-93EBF1C0E05A". Sometimes these are seen in
-    lower case and on Windows the standard format is often seen wrapped in
+    0xb0470602a64b11da863293ebf1c0e05a. A "standard" representation looks
+    like "b0470602-a64b-11da-8632-93ebf1c0e05a". Sometimes these are seen in
+    upper case and on Windows the standard format is often seen wrapped in
     parentheses.
 
     Converting back and forth is easy with "pack" and "unpack".
@@ -252,7 +252,7 @@ SEE ALSO
 SUPPORT
   Bugs / Feature Requests
     Please report any bugs or feature requests through the issue tracker at
-    <http://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>. You
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>. You
     will be notified automatically of any progress on your issue.
 
   Source Code
@@ -261,7 +261,7 @@ SUPPORT
 
     <https://github.com/dagolden/data-uuid-mt>
 
-      git clone https://github.com/dagolden/data-uuid-mt.git
+      git clone git://github.com/dagolden/data-uuid-mt.git
 
 AUTHOR
     David Golden <dagolden@cpan.org>
