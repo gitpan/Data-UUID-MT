@@ -3,7 +3,7 @@ NAME
     algorithm
 
 VERSION
-    version 1.000
+    version 1.001
 
 SYNOPSIS
       use Data::UUID::MT;
@@ -252,8 +252,8 @@ SEE ALSO
 SUPPORT
   Bugs / Feature Requests
     Please report any bugs or feature requests through the issue tracker at
-    <https://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>. You
-    will be notified automatically of any progress on your issue.
+    <https://github.com/dagolden/data-uuid-mt/issues>. You will be notified
+    automatically of any progress on your issue.
 
   Source Code
     This is open source software. The code repository is available for
@@ -265,6 +265,9 @@ SUPPORT
 
 AUTHOR
     David Golden <dagolden@cpan.org>
+
+CONTRIBUTOR
+    Matt Koscica <matt.koscica@gmail.com>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2011 by David Golden.

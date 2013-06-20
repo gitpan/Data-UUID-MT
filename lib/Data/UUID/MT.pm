@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Data::UUID::MT;
-our $VERSION = '1.000'; # VERSION
+our $VERSION = '1.001'; # VERSION
 
 use Config;
 use Math::Random::MT::Auto;
@@ -98,7 +98,7 @@ sub _build_64bit_v1 {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my ($sec,$usec) = Time::HiRes::gettimeofday();
@@ -124,7 +124,7 @@ sub _build_64bit_v1_old {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my ($sec,$usec) = Time::HiRes::gettimeofday();
@@ -150,7 +150,7 @@ sub _build_32bit_v1 {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     # Adapted from UUID::Tiny
@@ -195,7 +195,7 @@ sub _build_64bit_v4 {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my $uuid = pack("Q>2", $prng->irand, $prng->irand);
@@ -213,7 +213,7 @@ sub _build_64bit_v4_old {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my @irand = ($prng->irand, $prng->irand);
@@ -233,8 +233,8 @@ sub _build_32bit_v4 {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
-      $pid = $pid;
+      $prng->srand();
+      $pid = $$;
     }
     my $uuid = pack("N4",
       $prng->irand, $prng->irand, $prng->irand, $prng->irand
@@ -254,7 +254,7 @@ sub _build_64bit_v4s {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my ($sec,$usec) = Time::HiRes::gettimeofday();
@@ -281,7 +281,7 @@ sub _build_64bit_v4s_old {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     my ($sec,$usec) = Time::HiRes::gettimeofday();
@@ -309,7 +309,7 @@ sub _build_32bit_v4s {
 
   return sub {
     if ($$ != $pid) {
-      $prng->reseed();
+      $prng->srand();
       $pid = $$;
     }
     # Adapted from UUID::Tiny
@@ -358,13 +358,15 @@ __END__
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::UUID::MT - Fast random UUID generator using the Mersenne Twister algorithm
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 
@@ -652,7 +654,7 @@ L<RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace|http://www.apps.
 =head2 Bugs / Feature Requests
 
 Please report any bugs or feature requests through the issue tracker
-at L<https://rt.cpan.org/Public/Dist/Display.html?Name=Data-UUID-MT>.
+at L<https://github.com/dagolden/data-uuid-mt/issues>.
 You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
@@ -667,6 +669,10 @@ L<https://github.com/dagolden/data-uuid-mt>
 =head1 AUTHOR
 
 David Golden <dagolden@cpan.org>
+
+=head1 CONTRIBUTOR
+
+Matt Koscica <matt.koscica@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
